@@ -1,15 +1,15 @@
 # Burnoff Manager
 
-Burnoff Manager es una aplicación web diseñada para gestionar y monitorear quemas controladas, facilitando la administración tanto para usuarios como para administradores. Este proyecto está pensado para ser utilizado en entornos reales y forma parte de mi portafolio profesional.
+Burnoff Manager es una aplicación web diseñada para gestionar y monitorear membresias del Box de Crossfit BurnoffBox, facilitando la administración tanto para usuarios como para administradores. Este proyecto está pensado para ser utilizado en entornos reales
 
 ## Tecnologías utilizadas
 
 ### Backend
 - Python 3
-- FastAPI
-- SQLAlchemy
-- Alembic (migraciones)
-- Autenticación JWT
+- Flask
+- Flask SQLAlchemy
+- Flask-Migrate (Alembic)
+- Flask-JWT-Extended (autenticación JWT)
 - Base de datos relacional (configurable)
 
 ### Frontend
@@ -19,21 +19,21 @@ Burnoff Manager es una aplicación web diseñada para gestionar y monitorear que
 - Axios para consumo de API
 
 ### Otros
-- Docker Compose para orquestar servicios
+- Docker 
 
 ## Estructura del proyecto
 
 ```
 burnoff-manager/
-├── burnoff-manager-backend/   # API REST con FastAPI
+├── burnoff-manager-backend/   # API REST con Flask
 ├── burnoff-manager-frontend/  # Aplicación web en React
 ├── docker-compose.yml         # Orquestación de servicios
 ```
 
 ## Funcionamiento
 
-- Los usuarios pueden autenticarse y acceder a funcionalidades según su rol.
-- Los administradores pueden gestionar quemas, usuarios y ver reportes.
+- Los usuarios pueden autenticarse y acceder a funcionalidades según su rol. 
+- Los administradores pueden gestionar membresias, usuarios y citas.
 - El frontend consume la API del backend para mostrar y manipular datos en tiempo real.
 
 ## Configuración
@@ -71,8 +71,7 @@ VITE_API_URL=http://localhost:8000
 ## Estado actual
 
 - [x] Autenticación de usuarios
-- [x] Gestión básica de quemas
-- [x] Interfaz de login y home
+- [x] Interfaz de login
 - [ ] Panel de administración avanzado
 - [ ] Reportes y estadísticas
 
