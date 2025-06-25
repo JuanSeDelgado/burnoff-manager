@@ -66,4 +66,49 @@ burnoff-manager/
 
 ### 💻 Instalación y ejecución
 
+1. Clona el repositorio:
+   ```sh
+   git clone https://github.com/tuusuario/burnoff-manager.git
+   cd burnoff-manager
+   ```
+2. Crea los archivos `.env` en las carpetas `burnoff-manager-backend` y `burnoff-manager-frontend` según los ejemplos y variables necesarias para tu entorno.
+3. Construye y levanta los servicios con Docker Compose:
+   ```sh
+   docker-compose up --build
+   ```
+4. Accede a la aplicación web en `http://localhost:5173` (frontend) y a la documentación de la API en `http://localhost:8000/docs` (si tienes Swagger habilitado) o en el puerto configurado para el backend.
+
+> Si prefieres ejecutar los servicios por separado:
+>
+> - Backend:
+>   ```sh
+>   cd burnoff-manager-backend
+>   # Recomendado: usa entorno virtual con pipenv
+>   pipenv shell
+>   pipenv install
+>   # O si prefieres requirements.txt:
+>   # pip install -r requirements.txt
+>   flask db migrate -m "Mensaje de migración"  # Genera migraciones (solo si hay cambios en modelos)
+>   flask db upgrade  # Aplica migraciones
+>   flask run
+>   ```
+> - Frontend:
+>   ```sh
+>   cd burnoff-manager-frontend
+>   npm install
+>   npm run dev
+>   ```
+
+---
+
+## 👨‍💻 Autor
+
+**Juan Sebastián Orejuela**  
+Multimedia Engineer and Full Developer – 🇨🇴 Colombia  
+
+[🔗 LinkedIn](https://www.linkedin.com/in/juan-sebastian-orejuela-fullstack-developer/)  
+[🐙 GitHub](https://github.com/JuanSeDelgado)
+
+> 💡 *Este proyecto está en desarrollo activo. Sugerencias, ideas y contribuciones son bienvenidas.*
+
 
