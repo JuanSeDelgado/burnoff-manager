@@ -1,0 +1,12 @@
+# Ignore environment files
+.env
+# Ignore OS generated files
+.DS_Store
+Thumbs.db
+# Ignore IDE/editor folders
+.vscode/
+.idea/
+# Ignore Python and Node modules globally
+**/node_modules/
+**/__pycache__/
+**/venv/
